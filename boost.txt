@@ -1,0 +1,3 @@
+http://www.codeproject.com/Articles/4496/An-Introduction-to-Boost
+
+Boost is namespace aware. All components within the library are packaged in the "boost" namespace, or a sub-namespace thereof.
