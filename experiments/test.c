@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
+#include "hello-tp.h"
 void baz(){
 	usleep(1000);
         printf("\n baz \n");
