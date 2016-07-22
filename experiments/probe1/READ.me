@@ -1,0 +1,15 @@
+This directory is about tests with probe on the file test.c
+
+tests without -fInstruments (but with probe)
+gcc -c test.c
+gcc -o test test.o hello-tp.o -llttng-ust -ldl
+
+tests with -fInstruments
+gcc -c testF.c
+gcc -o testF testF.o hello-tp.o -llttng-ust -ldl -finstrument-functions
+
+The file script.sh takes the program testF and records its trace.
+*testF is compiled with fInstruments and therefore, the trace will show entry and exit for every funtion call*
+
+The file scriptX.sh takes A program(defined by the user) and records its trace (defined by the user).
+
