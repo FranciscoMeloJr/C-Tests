@@ -3,10 +3,15 @@
 
 #include "hello-tp.h"
 
+void xis(){
+        usleep(1000);
+        printf("\n baz \n");
+}
+
 void baz(){
 	usleep(1000);
         printf("\n baz \n");
-        
+        xis();
 }
 void bar(){
 	usleep(1000);
@@ -25,13 +30,13 @@ int main() {
 	      
         for (int i = 0; i < 10; i++) {
                 // tracepoint interval_begin, foo_provider 
-                tracepoint(hello_world, my_first_tracepoint, 23, "begin");              
+                tracepoint(hello_world, my_first_tracepoint, i, "begin");              
 
 		foo();
         	bar();
 	        baz();
 
-                tracepoint(hello_world, my_first_tracepoint, 23, "end");
+                tracepoint(hello_world, my_first_tracepoint, i, "end");
 
                 //tracepoint interval_end
 	}       

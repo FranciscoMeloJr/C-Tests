@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-#include "hello-tp.h"
+#include "tp.h"
 
 void baz(){
 	usleep(1000);
@@ -22,16 +22,17 @@ void foo(){
 int main() {
 	/*My 239th program in C*/
 	/*printf("Hello, World! \n"); */
-	int max = 10;      
-        for (int i = 0; i < 10; i++) {
+	      
+        int max = 100;
+        for (int i = 0; i < max; i++) {
                 // tracepoint interval_begin, foo_provider 
-                tracepoint(hello_world, my_first_tracepoint, 23, "begin");              
+                tracepoint(interval, tracepoint, 1, "begin");              
 
 		foo();
         	bar();
 	        baz();
 
-                tracepoint(hello_world, my_first_tracepoint, 23, "end");
+                tracepoint(interval, tracepoint, 2, "end");
 
                 //tracepoint interval_end
 	}       

@@ -35,6 +35,9 @@ int main() {
 
                 //tracepoint interval_end
 	}       
-
+         
+         tracepoint(interval, tracepoint, 2, "context");
+         tracepoint(interval, getinfo, 2, "cache"); 
+         
 	return 0;
 }

@@ -8,6 +8,8 @@ echo "This scripts records a trace from a generic .c program, which is compiled 
 echo "Enter a .c file"
 read name
 
+echo name.c
+
 gcc -o $name $name.c -g -finstrument-functions
 chmod +x $name
 

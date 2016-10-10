@@ -1,0 +1,26 @@
+vim hello-tp.c
+ 2058  mv hello-tp.c hello-tp.h
+ 2059  vim hello-tp.c
+ 2060  gcc -c -I. hello-tp.c
+ 2061  ls
+ 2062  vim hello.c
+ 2063  gcc -finstrument-functions -c hello.c 
+ 2064  gcc -o hello hello.o hello-tp.o -llttng-ust -ldl
+ 2065  ./hello world and beyond
+ 2066  lttng list --userspace
+ 2067  lttng create
+ 2068  lttng enable-event -u -a
+ 2069  lttng start 
+ 2070* ./hell
+ 2071  lttng stop 
+ 2072  ls
+ 2073  vim script.sh
+ 2074  chmod +x script.sh 
+ 2075  clear
+ 2076  ls
+ 2077  ./script.sh 
+ 2078  ls
+ 2079  clear
+ 2080  ls
+ 2081  history
+

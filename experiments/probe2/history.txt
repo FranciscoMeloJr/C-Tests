@@ -1,0 +1,7 @@
+vim test.c 
+ 2149  gcc -c -I. hello-tp.c
+ 2150  gcc -c -I. tp.c
+ 2151  gcc -finstrument-functions -c test.c
+ 2152  gcc -o test test.o hello-tp.o -llttng-ust -ldl
+ 2153  gcc -o test test.o tp.o -llttng-ust -ldl
+
