@@ -3,6 +3,23 @@
 
 #include "tp.h"
 
+//Perf:
+#include <linux/perf_event.h>
+#include <sys/syscall.h>
+#include <unistd.h>
+/* perf_event_open syscall wrapper */
+static long
+sys_perf_event_open(struct perf_event_attr *event,
+                    pid_t pid, int cpu, int group_fd, unsigned long flags)
+{
+    return syscall(__NR_perf_event_open, event, pid, cpu, group_fd, flags);
+}
+
+static inline pid_t gettid()
+{
+    return syscall(SYS_gettid);
+}
+
 void baz(int i){
 	usleep(1000*i);
         printf("\n baz \n");
