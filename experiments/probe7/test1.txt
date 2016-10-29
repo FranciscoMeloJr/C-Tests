@@ -1,0 +1,301 @@
+
+ foo 
+
+ bar 
+
+ baz 
+
+ bar 
+
+ baz 
+
+ baz 
+
+ foo 
+
+ bar 
+
+ baz 
+
+ bar 
+
+ baz 
+
+ baz 
+
+ foo 
+
+ bar 
+
+ baz 
+
+ bar 
+
+ baz 
+
+ baz 
+
+ foo 
+
+ bar 
+
+ baz 
+
+ bar 
+
+ baz 
+
+ baz 
+
+ foo 
+
+ bar 
+
+ baz 
+
+ bar 
+
+ baz 
+
+ baz 
+
+ foo 
+
+ bar 
+
+ baz 
+
+ bar 
+
+ baz 
+
+ baz 
+
+ foo 
+
+ bar 
+
+ baz 
+
+ bar 
+
+ baz 
+
+ baz 
+
+ foo 
+
+ bar 
+
+ baz 
+
+ bar 
+
+ baz 
+
+ baz 
+
+ foo 
+
+ bar 
+
+ baz 
+
+ bar 
+
+ baz 
+
+ baz 
+
+ foo 
+
+ bar 
+
+ baz 
+
+ bar 
+
+ baz 
+
+ baz 
+Session test3 created.
+Traces will be written in /home/frank/lttng-traces/test3-20161017-190152
+All UST events are enabled in channel channel0
+Tracing started for session test3
+
+ foo 
+
+ bar 
+
+ baz 
+
+ bar 
+
+ baz 
+
+ baz 
+
+ foo 
+
+ bar 
+
+ baz 
+
+ bar 
+
+ baz 
+
+ baz 
+
+ foo 
+
+ bar 
+
+ baz 
+
+ bar 
+
+ baz 
+
+ baz 
+
+ foo 
+
+ bar 
+
+ baz 
+
+ bar 
+
+ baz 
+
+ baz 
+
+ foo 
+
+ bar 
+
+ baz 
+
+ bar 
+
+ baz 
+
+ baz 
+
+ foo 
+
+ bar 
+
+ baz 
+
+ bar 
+
+ baz 
+
+ baz 
+
+ foo 
+
+ bar 
+
+ baz 
+
+ bar 
+
+ baz 
+
+ baz 
+
+ foo 
+
+ bar 
+
+ baz 
+
+ bar 
+
+ baz 
+
+ baz 
+
+ foo 
+
+ bar 
+
+ baz 
+
+ bar 
+
+ baz 
+
+ baz 
+
+ foo 
+
+ bar 
+
+ baz 
+
+ bar 
+
+ baz 
+
+ baz 
+Waiting for data availability.
+Tracing stopped for session test3
+Session test3 destroyed
+[3;J[H[2Jauto-20160418-153516
+auto-20161009-212010
+foo-20160713-160105
+foo-20160713-160435
+foo-20160714-200646
+hani-20160616-140255
+my-session2-20160408-210058
+my-session2-20160408-210433
+my-session3-20160408-214946
+my-session3-20160409-190230
+test2-20160616-151125
+test3-20161009-201547
+test3-20161009-212937
+test3-20161009-215042
+test3-20161009-215322
+test3-20161009-223133
+test3-20161009-224530
+test3-20161009-230927
+test3-20161009-231646
+test3-20161009-232312
+test3-20161009-233117
+test3-20161011-183219
+test3-20161011-213358
+test3-20161012-160758
+test3-20161014-212724
+test3-20161017-185644
+test3-20161017-185854
+test3-20161017-190043
+test3-20161017-190139
+test3-20161017-190152
+test5-20160616-152554
+test6-20160616-161539
+testF-20160722-160211
+testF-20160722-161239
+testF-20160722-164829
+testF-20160722-165838
+testF-20160722-173115
+testF-20160722-173323
+testF-20160722-173342
+testF-20160722-173356
+testF-20160722-173510
+testF-20160722-173620
+testF-20160722-173632
+testF-20160722-174022
+testF-20161007-202701
+testF-20161007-213506
+testF-20161007-214733
+testF-20161007-215247
+testF-20161007-215401
+testTrouble-20161017-183921
+trace5-20160616-151420
+ust_test1-20160616-143440
+ust_test3-20160616-145005
+ust_test4-20160616-150238

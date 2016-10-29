@@ -3,7 +3,7 @@
 
 #compilation:
 gcc -c -I. tp.c
-gcc -finstrument-functions -c testNewTracepoint.c
+gcc -g -finstrument-functions -c testNewTracepoint.c
 gcc -o testNTP testNewTracepoint.o tp.o -llttng-ust -ldl
 ./testNTP
 
@@ -11,6 +11,9 @@ gcc -o testNTP testNewTracepoint.o tp.o -llttng-ust -ldl
 lttng create test3
 lttng enable-event -u -a
 #lttng add-context -u -t vpid -t vtid -t procname
+lttng add-context -u -t perf:thread:instructions
+#lttng add-context -u -t perf:thread:cpu-cycles
+
 lttng start
 
 LD_PRELOAD=/usr/local/lib/liblttng-ust-cyg-profile.so ./testNTP

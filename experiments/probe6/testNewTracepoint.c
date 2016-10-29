@@ -36,6 +36,7 @@ void foo(int i){
 	bar(i);
 }
 
+//Main:
 int main() {
 	/*My 239th program in C*/
 	/*printf("Hello, World! \n"); */
@@ -43,20 +44,20 @@ int main() {
         int max = 10;
         for (int i = 0; i < max; i++) {
                 // tracepoint interval_begin, foo_provider 
-                tracepoint(interval, tracepoint, 1, "begin");              
-                tracepoint(interval, getinfo, i, "cache");
+                tracepoint(cct, tracepoint, 1, "begin");              
+                tracepoint(cct, getinfo, i, i*2, "cache");
                 usleep(1000 * i);
 
 		foo(i);
         	bar(i);
 	        baz(i);
 
-                tracepoint(interval, tracepoint, 2, "end");
+                tracepoint(cct, tracepoint, 2, "end");
 
                 //tracepoint interval_end
 	}       
          
-         tracepoint(interval, tracepoint, 2, "context");
+         tracepoint(cct, tracepoint, 2, "context");
          
          return 0;
 }

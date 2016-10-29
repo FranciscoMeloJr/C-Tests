@@ -27,7 +27,7 @@ int main() {
         for (int i = 0; i < max; i++) {
                 // tracepoint interval_begin, foo_provider 
                 tracepoint(interval, tracepoint, 1, "begin");              
-                tracepoint(interval, getinfo, i, "cache");
+                tracepoint(interval, getinfo, i, i*2, "cache");
                 usleep(1000 * i);
 
 		foo();
