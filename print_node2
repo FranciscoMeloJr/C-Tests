@@ -1,0 +1,101 @@
+#include <iostream>
+
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+class Node;
+string stringify(Node * list);
+
+// linked list will be composed of Nodes of this kind
+class Node
+{
+  public:
+    int data;
+    Node* next;
+
+  Node(int data, Node* next = nullptr)
+  {
+    this->data = data;
+    this->next = next;
+  }
+};
+
+/*
+Create a function stringify which accepts an argument list and returns a string representation of the list. The string representation of the list starts with the value of the current Node, specified by its data field, followed by a whitespace character, an arrow and another whitespace character (" -> "), followed by the rest of the list. The end of the string representation of a list must always end with nullptr. For example, given the following list:
+
+new Node(1, new Node(2, new Node(3)))
+... its string representation would be:
+
+"1 -> 2 -> 3 -> nullptr"
+And given the following linked list:
+
+new Node(0, new Node(1, new Node(4, new Node(9, new Node(16)))))
+... its string representation would be:
+
+"0 -> 1 -> 4 -> 9 -> 16 -> nullptr"
+*/
+
+string stringify(Node * list)
+{
+  /*Model;
+  fill me in to convert the linked list to a string
+  new Node(1, new Node(2, new Node(3)))
+    ... its string representation would be:
+
+    "1 -> 2 -> 3 -> nullptr"
+  */
+    
+  //0. Create a list of strings - vector
+  vector<string> temp; 
+  string r_string;
+
+  //1. Run for each node and get the value in a list:
+  while(list){
+        int int_aux = list->data;
+        temp.push_back(to_string(int_aux));
+        list = list->next;  
+  }
+
+  for(int i =0; i<temp.size(); i++) 
+    r_string += temp[i] + " -> ";
+
+  //Append the first value:
+  r_string += "nullptr"; 
+  return r_string; 
+}
+
+//Main:
+int main(void){
+
+	cout << "String representations of linked list";
+	cout << "[stringify]\n";
+	
+  string first = stringify(nullptr);
+  string second = stringify(new Node(1, new Node(2, new Node(3))));
+  string third = stringify(new Node(0, new Node(1, new Node(4, new Node(9, new Node(16))))));
+
+  cout << "Result1: " << first << "\n";
+  cout << "Result2: " << second << "\n";
+  cout << "Result2: " << third << "\n";
+
+	if( first == string("nullptr") )
+		cout << "True\n";
+  else
+    cout<<"False\n";
+	    	
+	if (second  == string("1 -> 2 -> 3 -> nullptr"))
+	  cout << "True\n";
+	else
+    cout << "False";
+    
+	if ( third == string("0 -> 1 -> 4 -> 9 -> 16 -> nullptr") )
+	  cout << "True\n";
+  else
+    cout << "False";
+
+  cout << "End";
+  return 0;
+	}
