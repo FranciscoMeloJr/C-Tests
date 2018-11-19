@@ -11,9 +11,7 @@ void read_m(M[1024][1024]);
 #define W2 1024;
 
 int main()
-{
-    
-    
+{   
     int A[H][W];
     int B[W][W2];
     int C[H][W2];
